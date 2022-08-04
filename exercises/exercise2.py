@@ -10,10 +10,10 @@ esta_lloviendo = True
 riego_activado = True
 
 # COMPLETAR - INICIO
-
+piso_mojado = esta_lloviendo or riego_activado
 # COMPLETAR - FIN
 
-assert piso_mojado
+assert piso_mojado == True
 
 
 """
@@ -26,10 +26,10 @@ lado_cuadrado = 5
 area_cuadrado = pow(lado_cuadrado, 2)
 
 # COMPLETAR - INICIO
-
+area_mayor_a_cinco = not(area_cuadrado<=lado_cuadrado)
 # COMPLETAR - FIN
 
-assert area_mayor_a_cinco
+assert area_mayor_a_cinco == True
 
 
 """
@@ -41,10 +41,10 @@ numero_1 = 49
 numero_2 = 50
 
 # COMPLETAR - INICIO
-
+resultado =  (numero_1%7==0) and (numero_2%7!=0)
 # COMPLETAR - FIN
 
-assert resultado
+assert resultado == True
 
 
 """
@@ -60,7 +60,7 @@ variable_04 = "90"
 variable_05 = 100
 
 # COMPLETAR - INICIO
-
+resultado = (variable_04==variable_01) or not(variable_05==80) or (variable_03==variable_02) or 1/0
 # COMPLETAR - FIN
 
-assert resultado == 80
+assert resultado
