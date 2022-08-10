@@ -12,7 +12,7 @@ persona_02 = "Kevin"
 edad_02 = 41
 
 # COMPLETAR - INICIO
-"Hola"
+
 # COMPLETAR - FIN
 
 assert comparar_nombre_y_edad
