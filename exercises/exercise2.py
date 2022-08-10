@@ -45,7 +45,6 @@ resultado = (numero_1 % 7)==0 and not ((numero_2 % 7)==0)
 
 assert resultado
 
-
 """
 Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
 el mismo valor de la variable 3.
