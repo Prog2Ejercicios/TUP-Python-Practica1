@@ -10,12 +10,14 @@ persona_01 = "Kevin"
 edad_01 = 24
 persona_02 = "Kevin"
 edad_02 = 41
-
+comparar_nombre_y_edad = bool
 # COMPLETAR - INICIO
-
+if persona_01 == persona_02 and edad_01 != edad_02:
+    comparar_nombre_y_edad = True
+    print(comparar_nombre_y_edad)
 # COMPLETAR - FIN
 
-assert comparar_nombre_y_edad
+assert comparar_nombre_y_edad == True
 
 
 """
@@ -26,12 +28,14 @@ Aclaración: Se puede utilizar and, or y not.
 
 marca_del_auto = "Chevrolet"
 modelo_de_auto = 1998
-
+comparar_marca_y_modelo = bool
 # COMPLETAR - INICIO
-
+if marca_del_auto != "Ford" and modelo_de_auto <= 2000:
+    comparar_marca_y_modelo = True
+    print(comparar_marca_y_modelo)
 # COMPLETAR - FIN
 
-assert comparar_marca_y_modelo
+assert comparar_marca_y_modelo == True
 
 
 """
@@ -44,12 +48,14 @@ Restricción: Utilizar comparaciones encadenadas - No utilizar and, or ni not.
 superficie_de_campo_01 = 85121
 superficie_de_campo_02 = 851212
 superficie_de_campo_03 = 8512
-
+comparar_superficie = bool
 # COMPLETAR - INICIO
-
+if superficie_de_campo_01 < superficie_de_campo_02 > superficie_de_campo_03:
+    comparar_superficie = True
+    print(comparar_superficie)
 # COMPLETAR - FIN
 
-assert comparar_superficie
+assert comparar_superficie == True
 
 
 """
@@ -64,9 +70,11 @@ bananas = 100
 naranjas = 400
 manzanas = 300
 peras = 30
-
+comparar_frutas = bool
 # COMPLETAR - INICIO
-
+if bananas < naranjas / 2 < manzanas * 2 <= peras ** 2:
+    comparar_frutas = True
+    print(comparar_frutas)
 # COMPLETAR - FIN
 
-assert comparar_frutas
+assert comparar_frutas == True

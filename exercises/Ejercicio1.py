@@ -10,6 +10,9 @@ lado_cuadrado = 5
 
 # COMPLETAR - INICIO
 
+area_cuadrado = lado_cuadrado * lado_cuadrado
+print("El area del cuadrado es: ", area_cuadrado)
+
 # COMPLETAR - FIN
 
 assert area_cuadrado == 25
@@ -22,6 +25,9 @@ Re-Escribir usando el operador de potencia.
 lado_cuadrado = 5
 
 # COMPLETAR - INICIO
+
+area_cuadrado = lado_cuadrado ** 2
+print("El area del cuadrado es: ", area_cuadrado)
 
 # COMPLETAR - FIN
 
@@ -36,7 +42,10 @@ lado_cuadrado = 5
 
 # COMPLETAR - INICIO
 
+print("El area del cuadrado es: ", pow(lado_cuadrado, 2))
+
 # COMPLETAR - FIN
+
 
 assert area_cuadrado == 25
 
@@ -50,8 +59,11 @@ precio = 3.74
 presupuesto_disponible = 10
 
 # COMPLETAR - INICIO
+cantidad_a_comprar = presupuesto_disponible // precio
+print(cantidad_a_comprar)
 
 # COMPLETAR - FIN
+
 
 assert cantidad_a_comprar == 2
 
@@ -62,9 +74,11 @@ Restricción: Usar el operador módulo.
 """
 
 numero_incalculable = 2 ** 54 - 1
-
+es_divisible_por_siete = bool
 # COMPLETAR - INICIO
-
+if numero_incalculable % 7==0:
+    es_divisible_por_siete = True
+    print("El numero es divisible por 7")
 # COMPLETAR - FIN
 
-assert es_divisible_por_siete
+assert es_divisible_por_siete == True
