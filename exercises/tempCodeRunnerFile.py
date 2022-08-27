@@ -1,10 +1,11 @@
-variable_01 = "Le debo "
-variable_02 = 6
-variable_03 = " pesos a un amigo hace "
-variable_04 = " años."
-variable_05 = "Ezequiel"
+diccionario_2 = {
+    "clave1": 234567,
+    "clave2": False,
+    "clave3": "Valor 13",
+    "clave4": [1, 2, 3, 4, 5, 6],
+}
 
 # COMPLETAR - INICIO
-strings_concatenados = variable_01 + "{}".format(variable_02) + variable_03 + " Se llama {}".format(variable_05)
+clave5 =(diccionario_2.get("clave5",5))
 # COMPLETAR - FIN
-print (strings_concatenados)
+print(clave5)

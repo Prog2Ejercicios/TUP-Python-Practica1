@@ -88,8 +88,7 @@ diccionario_2 = {
 }
 
 # COMPLETAR - INICIO
-clave5 =(diccionario_2.get('clave4'))
-clave5 = clave5[4]
+clave5 =(diccionario_2.get("clave5",5))
 # COMPLETAR - FIN
 print(clave5)
 assert clave5 == 5
