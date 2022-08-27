@@ -6,7 +6,12 @@ Restricción: Utilizar el método append
 """
 
 # COMPLETAR - INICIO
-lista_01 = 
+lista_01 = []
+lista_01.append(1)
+lista_01.append("x")
+lista_01.append(3)
+lista_01.append("S")
+print(lista_01)
 # COMPLETAR - FIN
 
 assert len(lista_01) == 4
@@ -20,10 +25,11 @@ Restricción: Utilizar el método pop
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
-
+elemento_extraido = lista.pop(3)
+print(elemento_extraido)
 # COMPLETAR - FIN
-
 assert elemento_extraido == 6
+
 
 
 """
@@ -36,7 +42,8 @@ lista_b = ["4", "5", "6"]
 lista_c = ["siete", "ocho", "nueve"]
 
 # COMPLETAR - INICIO
-
+listas_concatenadas_01 = lista_a + lista_b + lista_c 
+print(listas_concatenadas_01)
 # COMPLETAR - FIN
 
 assert listas_concatenadas_01 == [1, 2, 3, "4", "5", "6", "siete", "ocho", "nueve"]
@@ -51,7 +58,8 @@ variable_01 = 2
 lista_nueva = [0, 1, 3, 4]
 
 # COMPLETAR - INICIO
-
+lista_nueva.insert(variable_01, 2)
+print(lista_nueva)
 # COMPLETAR - FIN
 
 assert lista_nueva == [0, 1, 2, 3, 4]
@@ -63,12 +71,14 @@ Restricción: Utilizar el método append junto al indexado simple
 """
 
 lista = ["ho", 3.1416, 42, 81, 6, "la"]
-
+lista_primero_y_ultimo = []
 # COMPLETAR - INICIO
-
+lista_primero_y_ultimo.append("ho")
+lista_primero_y_ultimo.append(lista[-1])
+print(lista_primero_y_ultimo)
 # COMPLETAR - FIN
-
 assert lista_primero_y_ultimo == ["ho", "la"]
+
 
 
 """
@@ -77,9 +87,12 @@ Restricción: Utilizar el método append junto al indexado simple
 """
 
 lista = ["ho", 3.1416, "la", 81, 6, 42]
-
+lista_primeros = []
 # COMPLETAR - INICIO
-
+lista_primeros.append(lista[0])
+lista_primeros.append(lista[1])
+lista_primeros.append(lista[2])
+print(lista_primeros)
 # COMPLETAR - FIN
 
 assert lista_primeros == ["ho", 3.1416, "la"]
@@ -91,12 +104,13 @@ Restricción: Utilizar indexado múltiple
 """
 
 lista = ["ho", 3.1416, "la", 81, 6, 42]
-
+lista_primeros = []
 # COMPLETAR - INICIO
-
+lista_primeros = lista[0:3]
+print(lista_primeros)
 # COMPLETAR - FIN
-
 assert lista_primeros == ["ho", 3.1416, "la"]
+
 
 
 """
@@ -106,9 +120,11 @@ Restricción: Utilizar el método extend junto al indexado múltiple
 """
 
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
-
+lista_primeros_y_ultimos = []
 # COMPLETAR - INICIO
-
+lista_primeros_y_ultimos.extend(lista[0:2])
+lista_primeros_y_ultimos.extend(lista[5:7])
+print(lista_primeros_y_ultimos)
 # COMPLETAR - FIN
 
 assert lista_primeros_y_ultimos == ["ho", "la", "como", "estas?"]
@@ -123,7 +139,8 @@ lista_01 = [0, 1, 2, 3]
 lista_02 = [5, 6]
 
 # COMPLETAR - INICIO
-
+lista_concatenada = lista_01 + lista_02
+print(lista_concatenada)
 # COMPLETAR - FIN
 
 assert lista_concatenada == [0, 1, 2, 3, 5, 6]
@@ -137,7 +154,8 @@ Restricción: Utiliar el operador *
 lista_01 = [0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-
+lista_duplicada = lista_01 * 3
+print(lista_duplicada)
 # COMPLETAR - FIN
 
 assert lista_duplicada == [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
@@ -150,12 +168,14 @@ Restricción: Utiliar el operador in
 
 elemento = 1.0
 lista = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1.0, 1, 0, 1, 0, 1]
-
+variable_booleana = bool
 # COMPLETAR - INICIO
-
+if 1.0 in lista:
+    variable_booleana = True
+    print(variable_booleana)
 # COMPLETAR - FIN
 
-assert variable_booleana
+assert variable_booleana == True
 
 
 """
@@ -165,12 +185,14 @@ Restricción: Utilizar el operador ==
 
 lista_01 = [1, 2, 3, 4.5, 6, 7]
 lista_02 = [1, 3, 2, 4, 5, 6, 7]
-
+son_iguales = bool
 # COMPLETAR - INICIO
-
+if lista_01 == lista_02:
+    son_iguales = True
+    print(son_iguales)
 # COMPLETAR - FIN
 
-assert not son_iguales
+assert not son_iguales == True
 
 
 """
@@ -181,12 +203,14 @@ Restricción: Utilizar el método any
 """
 
 notas = [False, False, False, False, False, False, False, False, False]
-
+no_tiene_examenes_aprobados = bool
 # COMPLETAR - INICIO
-
+if any(notas) == False:
+    no_tiene_examenes_aprobados = True
+    print(no_tiene_examenes_aprobados)
 # COMPLETAR - FIN
 
-assert no_tiene_examenes_aprobados
+assert no_tiene_examenes_aprobados == True
 
 
 """
@@ -197,9 +221,13 @@ Restricción: Utilizar el método all
 """
 
 notas = [True, True, False, True, True, True, True, True, True, True, True, True]
-
+tiene_todo_aprobado = bool
 # COMPLETAR - INICIO
-
+if all(notas) == True:
+    tiene_todo_aprobado = True
+if all(notas) == False:
+    tiene_todo_aprobado = False  
+print(tiene_todo_aprobado)
 # COMPLETAR - FIN
 
-assert not tiene_todo_aprobado
+assert not tiene_todo_aprobado == True

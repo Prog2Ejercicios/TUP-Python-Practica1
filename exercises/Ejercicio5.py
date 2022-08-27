@@ -9,9 +9,10 @@ Restricción: Utilizar el operador +.
 variable_01 = "¡Buenos "
 variable_02 = "días "
 variable_03 = "a todos!"
-
+strings_concatenados = str
 # COMPLETAR - INICIO
-
+strings_concatenados = variable_01 + variable_02 + variable_03
+print(strings_concatenados)
 # COMPLETAR - FIN
 
 assert strings_concatenados == "¡Buenos días a todos!"
@@ -26,9 +27,13 @@ usar operadores).
 # "¡Mamá "
 # "estoy concatenando "
 # "strings!"
-
+strings_concatenados = str
+variable_01 = "¡Mamá "
+variable_02 = "estoy concatenando "
+variable_03 = "strings!"
 # COMPLETAR - INICIO
-
+strings_concatenados = "¡Mamá estoy concatenando strings!"
+print(strings_concatenados)
 # COMPLETAR - FIN
 
 assert strings_concatenados == "¡Mamá estoy concatenando strings!"
@@ -43,9 +48,11 @@ Restricción: Utilizar el operador +.
 variable_01 = "Le debo "
 variable_02 = 600
 variable_03 = " pesos a un amigo."
-
+strings_concatenados = str
 # COMPLETAR - INICIO
-
+variable_02 = str(variable_02)
+strings_concatenados = variable_01 + variable_02 + variable_03
+print(strings_concatenados)
 # COMPLETAR - FIN
 
 assert strings_concatenados == "Le debo 600 pesos a un amigo."
@@ -60,16 +67,20 @@ Restricción: Utilizar el método format.
 variable_01 = "Le debo "
 variable_02 = 6
 variable_03 = " pesos a un amigo hace "
-variable_04 = " años."
+variable_04 = " años. "
+variable_06 = "Se llama "
 variable_05 = "Ezequiel"
-
+strings_concatenados = str
 # COMPLETAR - INICIO
 
+strings_concatenados="{}{}{}{}{}{}{}" .format(variable_01, variable_02, variable_03, variable_02, variable_04, variable_06, variable_05)
+print(strings_concatenados)
 # COMPLETAR - FIN
 
 assert (
     strings_concatenados == "Le debo 6 pesos a un amigo hace 6 años. Se llama Ezequiel"
 )
+
 
 
 """
@@ -81,9 +92,10 @@ variable_01 = "Le pagué "
 variable_02 = 2
 variable_03 = " pesos que le debía a Ezequiel, me faltan $"
 variable_04 = 4
-
+strings_concatenados = str
 # COMPLETAR - INICIO
-
+strings_concatenados = f"{variable_01}{variable_02}{variable_03}{variable_04}"
+print(strings_concatenados)
 # COMPLETAR - FIN
 
 assert strings_concatenados == "Le pagué 2 pesos que le debía a Ezequiel, me faltan $4"
