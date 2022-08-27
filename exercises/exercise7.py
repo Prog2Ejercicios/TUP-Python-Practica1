@@ -81,8 +81,7 @@ Restricción: Utilizar desempaquetado con comodines
 tupla = (73, 45, 344, 3434, 2)
 
 # COMPLETAR - INICIO
-a, *rest = (73, 45, 344, 3434, 2)
-primer = a
+primer, *rest = (73, 45, 344, 3434, 2)
 # COMPLETAR - FIN
 
 assert primer == 73
