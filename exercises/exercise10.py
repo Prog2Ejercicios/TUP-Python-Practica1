@@ -8,7 +8,8 @@ Interpretar como booleano la siguente variable y guardar el valor resultante en 
 A = 5
 
 # COMPLETAR - INICIO
-
+variable_01=[]
+variable_01=(variable_01 is not A)
 # COMPLETAR - FIN
 
 assert variable_01 is True
@@ -21,7 +22,8 @@ Interpretar como booleano la siguente variable y guardar el valor resultante en 
 Domicilio = ""
 
 # COMPLETAR - INICIO
-
+variable_02=[]
+variable_02= variable_02 is Domicilio
 # COMPLETAR - FIN
 
 assert variable_02 is False
@@ -34,7 +36,8 @@ Interpretar como booleano la siguente variable y guardar el valor resultante en 
 Domicilio = "Alsina 2446" or "Pueyrredón y la vía"
 
 # COMPLETAR - INICIO
-
+variable_03=[]
+variable_03=variable_03 is not Domicilio
 # COMPLETAR - FIN
 
 assert variable_03 is True
@@ -47,7 +50,8 @@ Interpretar como booleano la siguente variable y guardar el valor resultante en 
 lista_de_compras = "No comprar nada" and ["Pan", "Aceite", "Sal"]
 
 # COMPLETAR - INICIO
-
+variable_04=[]
+variable_04=variable_04 is not lista_de_compras
 # COMPLETAR - FIN
 
 assert variable_04 is True
@@ -60,7 +64,8 @@ Interpretar como booleano la siguente variable y guardar el valor resultante en 
 lista_de_ids = 0 and [1236, 5565, 8956, 2534]
 
 # COMPLETAR - INICIO
-
+variable_05=[]
+variable_05=variable_05 is lista_de_ids
 # COMPLETAR - FIN
 
 assert variable_05 is False
@@ -73,7 +78,8 @@ Interpretar como booleano la siguente variable y guardar el valor resultante en 
 diccionario = {} and {"Nombre": "Alberto Paz", "DNI": 12365855}
 
 # COMPLETAR - INICIO
-
+variable_06=[]
+variable_06=variable_06 is diccionario
 # COMPLETAR - FIN
 
 assert variable_06 is False

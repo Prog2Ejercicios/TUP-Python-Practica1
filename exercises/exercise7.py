@@ -2,14 +2,14 @@
 
 
 """
-A partir de ls siguiente lista instanciar una tupla que contenga todos sus valores
+A partir de la siguiente lista instanciar una tupla que contenga todos sus valores
 y en el mismo orden.
 """
 
 lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
-
+tupla=tuple(lista)
 # COMPLETAR - FIN
 
 assert tupla == ("casa", "perro", "pato", "gato")
@@ -23,7 +23,7 @@ y en el mismo orden.
 tupla = "casa", "perro", "pato", "gato", "tenedor"
 
 # COMPLETAR - INICIO
-
+lista=list(tupla)
 # COMPLETAR - FIN
 
 assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
@@ -36,6 +36,9 @@ Desempaquetar la siguiente tupla en las variables a, b y c
 tupla = ("primer", 25, [1, 2, 3])
 
 # COMPLETAR - INICIO
+a=tupla[0]
+b=tupla[1]
+c=tupla[2]
 
 # COMPLETAR - FIN
 
@@ -50,6 +53,7 @@ tupla = (87, 98, 35, 67, 4, 9)
 
 # COMPLETAR - INICIO
 
+total=tupla[0], tupla[1], tupla[2], tupla[3], tupla[4], tupla[5]
 # COMPLETAR - FIN
 
 assert total == 300
@@ -63,7 +67,12 @@ Restricción: Utilizar f-Strings.
 lista = ["esta", "mañana", "sali", "a", "correr"]
 
 # COMPLETAR - INICIO
-
+a=lista[0]
+b=lista[1]
+c=lista[2]
+d=lista[3]
+e=lista[4]
+string_concatenado="{} {} {} {} {} {}" .format(a, b, c, d, e)
 # COMPLETAR - FIN
 
 assert string_concatenado == "esta mañana sali a correr"
@@ -77,6 +86,7 @@ Restricción: Utilizar desempaquetado con comodines
 tupla = (73, 45, 344, 3434, 2)
 
 # COMPLETAR - INICIO
+primer, *rest=tupla
 
 # COMPLETAR - FIN
 
@@ -91,6 +101,10 @@ Restricción: Utilizar desempaquetado con comodines
 lista = [73, 45, 344, 3434, 2]
 
 # COMPLETAR - INICIO
+primero=lista[0]
+ultimo=lista[-1]
+suma=primero+ultimo
+
 
 # COMPLETAR - FIN
 
@@ -106,7 +120,8 @@ Restricción: Utilizar desempaquetado con comodines y f-Strings
 tupla = ("anoche", "fui", "a", "la", "fiesta", "pero", "no", "pude", "entrar")
 
 # COMPLETAR - INICIO
-
+a, b, c, d, e, *rest=tupla
+string_concatenado="{} {} {} {} {} " .format(a, b, c, d, e)
 # COMPLETAR - FIN
 
 assert string_concatenado == "anoche fui a la fiesta"
