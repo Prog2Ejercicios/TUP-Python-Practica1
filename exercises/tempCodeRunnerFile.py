@@ -1,11 +1,12 @@
-diccionario_2 = {
-    "clave1": 234567,
-    "clave2": False,
-    "clave3": "Valor 13",
-    "clave4": [1, 2, 3, 4, 5, 6],
-}
+nombre = "Esteban"
+domicilio = "Los sauces 3446"
+edad = "35"
 
 # COMPLETAR - INICIO
-clave5 =(diccionario_2.get("clave5",5))
+conjunto_2=set()
+conjunto_2={"5", "6", "7"}
+conjunto_2.add(nombre)
+conjunto_2.add(domicilio)
+conjunto_2.add(edad)
 # COMPLETAR - FIN
-print(clave5)
+print(conjunto_2)
