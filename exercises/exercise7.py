@@ -10,7 +10,7 @@ lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
 
-tupla = ("casa", "perro", "pato", "gato")
+tupla = tuple(lista)
 
 # COMPLETAR - FIN
 
