@@ -2,13 +2,15 @@
 
 
 """
-A partir de ls siguiente lista instanciar una tupla que contenga todos sus valores
+A partir de la siguiente lista instanciar una tupla que contenga todos sus valores
 y en el mismo orden.
 """
 
 lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
+
+tupla = tuple(lista)
 
 # COMPLETAR - FIN
 
@@ -24,6 +26,9 @@ tupla = "casa", "perro", "pato", "gato", "tenedor"
 
 # COMPLETAR - INICIO
 
+#lista = ["casa", "perro", "pato", "gato", "tenedor"]
+lista = list(tupla)
+
 # COMPLETAR - FIN
 
 assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
@@ -37,6 +42,8 @@ tupla = ("primer", 25, [1, 2, 3])
 
 # COMPLETAR - INICIO
 
+a,b,c = ("primer", 25, [1, 2, 3])
+
 # COMPLETAR - FIN
 
 assert a == "primer" and b == 25 and c == [1, 2, 3]
@@ -49,6 +56,9 @@ Desempaquetar la siguiente tupla y luego sumar sus valores
 tupla = (87, 98, 35, 67, 4, 9)
 
 # COMPLETAR - INICIO
+
+num1, num2, num3, num4, num5, num6 = (87, 98, 35, 67, 4, 9)
+total = num1 + num2 + num3 + num4 + num5 + num6
 
 # COMPLETAR - FIN
 
@@ -64,6 +74,10 @@ lista = ["esta", "mañana", "sali", "a", "correr"]
 
 # COMPLETAR - INICIO
 
+var_01, var_02, var_03, var_04, var_05 = ["esta", "mañana", "sali", "a", "correr"]
+
+string_concatenado = f"{var_01} {var_02} {var_03} {var_04} {var_05}"
+
 # COMPLETAR - FIN
 
 assert string_concatenado == "esta mañana sali a correr"
@@ -77,6 +91,8 @@ Restricción: Utilizar desempaquetado con comodines
 tupla = (73, 45, 344, 3434, 2)
 
 # COMPLETAR - INICIO
+
+primer, *rest = tupla
 
 # COMPLETAR - FIN
 
@@ -92,6 +108,9 @@ lista = [73, 45, 344, 3434, 2]
 
 # COMPLETAR - INICIO
 
+first, *middle, last = lista
+suma = first+last
+
 # COMPLETAR - FIN
 
 assert suma == 75
@@ -106,6 +125,9 @@ Restricción: Utilizar desempaquetado con comodines y f-Strings
 tupla = ("anoche", "fui", "a", "la", "fiesta", "pero", "no", "pude", "entrar")
 
 # COMPLETAR - INICIO
+
+first_element, second_element, third_element, fourth_element, fifth_element, *rest = tupla
+string_concatenado = f"{first_element} {second_element} {third_element} {fourth_element} {fifth_element}"
 
 # COMPLETAR - FIN
 
