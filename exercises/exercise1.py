@@ -1,70 +1,67 @@
-"""Aritmética Básica"""
+"""Lógica Simple y Cortocircuito"""
 
 
 """
-Calcular el área del cuadrado usando las variables disponibles.
-Restricción: Usar el operador de multiplicación
+Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
+True si al menos una de las variables es True.
+"""
+
+esta_lloviendo = True
+riego_activado = True
+
+# COMPLETAR - INICIO
+piso_mojado = (esta_lloviendo or riego_activado)
+# COMPLETAR - FIN
+
+assert piso_mojado
+
+
+"""
+Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
+True si el área es mayor a 5.
+Restricción: Usar NOT.
 """
 
 lado_cuadrado = 5
+area_cuadrado = pow(lado_cuadrado, 2)
+
+# COMPLETAR - INICIO
+area_mayor_a_cinco = not lado_cuadrado or area_cuadrado
+
+# COMPLETAR - FIN
+
+assert area_mayor_a_cinco
+
+
+"""
+Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
+True si el número 1 es divisible por 7 y al mismo tiempo el número 2 no lo es.
+"""
+
+numero_1 = 49
+numero_2 = 50
+
+# COMPLETAR - INICIO
+resultado = not numero_1 and numero_2
+# COMPLETAR - FIN
+
+assert resultado
+
+
+"""
+Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
+el mismo valor de la variable 3.
+Restricción: sólo usar OR, NOT y el mecanismo de cortocircuito.
+"""
+
+variable_01 = False
+variable_02 = True
+variable_03 = 80
+variable_04 = "90"
+variable_05 = 100
 
 # COMPLETAR - INICIO
 
 # COMPLETAR - FIN
 
-assert area_cuadrado == 25
-
-
-"""
-Re-Escribir usando el operador de potencia.
-"""
-
-lado_cuadrado = 5
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert area_cuadrado == 25
-
-
-"""
-Re-Escribir usando la función pow.
-"""
-
-lado_cuadrado = 5
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert area_cuadrado == 25
-
-
-"""
-Calcular la cantidad de unidades a comprar.
-Restricción: Usar el operador de división entera.
-"""
-
-precio = 3.74
-presupuesto_disponible = 10
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert cantidad_a_comprar == 2
-
-
-"""
-Determinar si el número de la variable es divisible por 7.
-Restricción: Usar el operador módulo.
-"""
-
-numero_incalculable = 2 ** 54 - 1
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert es_divisible_por_siete
+assert resultado == 80

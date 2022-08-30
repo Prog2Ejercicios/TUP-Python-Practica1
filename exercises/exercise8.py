@@ -1,158 +1,151 @@
-"""Diccionarios"""
+"""Conjuntos"""
 
 
 """
-Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
-- Clave "Nombre", valor de tipo string: "Mario Pedernera"
-- Clave "DNI", valor de tipo integer: 56895632
-- Clave "Domicilio", valor de tipo string: Los alamos 4509"
-- Clave "Compras", valor de tipo lista: ["cafetera", "TV 50 pulgadas", "mouse gamer"]
+Inicializar un conjunto vacío y agregarle los valores de las siguiente variables
+Restricción: Utilizar el metodo add
 """
+
+numero_1 = 1
+numero_2 = 2
+numero_3 = 3
 
 # COMPLETAR - INICIO
-
+conjunto_1 = set()
+conjunto_1.add(numero_1)
+conjunto_1.add(numero_2)
+conjunto_1.add(numero_3)
 # COMPLETAR - FIN
 
-assert (
-    (Cliente["Nombre"] == "Mario Pedernera")
-    and (Cliente["DNI"] == 56895632)
-    and (Cliente["Domicilio"] == "Los alamos 4509")
-    and (Cliente["Compras"] == ["cafetera", "TV 50 pulgadas", "mouse gamer"])
-)
+assert conjunto_1 == {1, 2, 3}
 
 
 """
-Definir un diccionario para las 'Compras' que contenga los siguiente valores:
-- Clave "Mario Pedernera", valor de tipo lista: ["cafetera", "TV 50 pulgadas", "mouse gamer"]
-- Clave "Ezequiel Castello", valor de tipo lista: ["ipad", "ipod", "iphone"]
-- Clave "Pablo Piristrelli", valor de tipo lista: ["Reproductor de CD", "Videograbadora"]
+Inicializar un conjunto vacío con los valores "5", "6" y "7" y agregarle los valores de
+las siguiente variables
+Restricción: Utilizar el metodo add
 """
+
+nombre = "Esteban"
+domicilio = "Los sauces 3446"
+edad = "35"
 
 # COMPLETAR - INICIO
-
+conjunto_2 = {"5","6","7"}
+conjunto_2.add(edad)
+conjunto_2.add(nombre)
+conjunto_2.add(domicilio)
 # COMPLETAR - FIN
 
-assert (
-    (Compras["Mario Pedernera"] == ["cafetera", "TV 50 pulgads", "mouse gamer"])
-    and (Compras["Ezequiel Castello"] == ["ipad", "ipod", "iphone"])
-    and (Compras["Pablo Piristrelli"] == ["Reproductor de CD", "Videograbadora"])
-)
+assert conjunto_2 == {"35", "Esteban", "7", "6", "Los sauces 3446", "5"}
 
 
 """
-Dado el siguiente diccionario obtener el valor de la "clave1" utilizando el metodo get y
-guardarlo en la variable clave1
+Dados dos conjuntos calcular su interseccion utiilizando el caracter ampersand
 """
 
-diccionario = {
-    "clave1": 234,
-    "clave2": True,
-    "clave3": "Valor 1",
-    "clave4": [1, 2, 3, 4],
-}
+conjunto_03 = {1, 23, 4, 8, 5, 10, 15, 21}
+conjunto_04 = {12, 4, 10, 21, 78}
 
 # COMPLETAR - INICIO
-
+conjunto_interseccion = conjunto_03 & conjunto_04
 # COMPLETAR - FIN
 
-assert clave1 == 234
-
+assert conjunto_interseccion == {10, 4, 21}
 
 """
-Dado el siguiente diccionario forzar la obtención de un valor por defecto igual a 5 utilizando
-el metodo get y almacenarlo en la variable clave5
-Restricción: Se debe intentar obtener un valor para la clave inexistente "clave5"
+Dados dos conjuntos calcular su interseccion utiilizando el metodo intersection
 """
 
-diccionario_2 = {
-    "clave1": 234567,
-    "clave2": False,
-    "clave3": "Valor 13",
-    "clave4": [1, 2, 3, 4, 5, 6],
-}
+conjunto_03 = {1, 23, 4, 8, 5, 10, 15, 21}
+conjunto_04 = {12, 4, 10, 21, 78}
 
 # COMPLETAR - INICIO
-
+conjunto_interseccion = conjunto_03.intersection(conjunto_04)
 # COMPLETAR - FIN
 
-assert clave5 == 5
+assert conjunto_interseccion == {10, 4, 21}
 
 
 """
-Dado el siguiente diccionario obtener una lista de todas sus claves por medio del método keys
+Dados dos conjuntos calcular su union utiilizando el caracter pipe
 """
 
-diccionario_3 = {
-    "clave1": 1234,
-    "clave2": True,
-    "clave3": "Valor 1",
-    "clave4": [1, 2, 3, 4],
-}
+conjunto_05 = {1, 2, 3, 4}
+conjunto_06 = {5, 6, 7, 8}
 
 # COMPLETAR - INICIO
-
+conjunto_union = conjunto_05 | conjunto_06
 # COMPLETAR - FIN
 
-assert keys == ["clave1", "clave2", "clave3", "clave4"]
+assert conjunto_union == {1, 2, 3, 4, 5, 6, 7, 8}
 
 
 """
-Dado el siguiente diccionario obtener una lista de todas sus valores por medio del método values
+Dados dos conjuntos calcular su union utiilizando el metodo union
 """
 
-diccionario_4 = {
-    "clave1": 1234,
-    "clave2": 4567,
-    "clave3": 8910,
-    "clave4": 1112,
-}
+conjunto_05 = {1, 2, 3, 4}
+conjunto_06 = {5, 6, 7, 8}
 
 # COMPLETAR - INICIO
-
+conjunto_union = conjunto_05.union(conjunto_06)
 # COMPLETAR - FIN
 
-assert values == [1234, 4567, 8910, 1112]
+assert conjunto_union == {1, 2, 3, 4, 5, 6, 7, 8}
 
 
 """
-Dado el siguiente diccionario obtener una lista de sus claves y sus valores uno a continuación
-de otro por medio del metodo items
+Dados dos conjuntos calcular su diferencia utiilizando el caracter menos
 """
 
-diccionario_5 = {
-    1: 1111,
-    2: 2222,
-    3: 3333,
-    4: 4444,
-}
+conjunto_07 = {1, 2, 3, 4, 5, 6, 7, 8}
+conjunto_08 = {2, 4, 6, 8}
 
 # COMPLETAR - INICIO
-
+conjunto_diferencia = conjunto_07 - conjunto_08
 # COMPLETAR - FIN
 
-assert items == [(1, 1111), (2, 2222), (3, 3333), (4, 4444)]
+assert conjunto_diferencia == {1, 3, 5, 7}
 
 
 """
-Dados dos diccionarios actualizar el primero con los valores del segundo utilizando el método update
+Dados dos conjuntos calcular su diferencia utiilizando el metodo difference
 """
 
-diccionario_6 = {
-    1: 1111,
-    2: 2222,
-    3: 3333,
-    4: 4444,
-}
-
-diccionario_7 = {
-    2: 2223,
-    3: 3334,
-    5: 5555,
-    6: 6666,
-}
+conjunto_07 = {1, 2, 3, 4, 5, 6, 7, 8}
+conjunto_08 = {2, 4, 6, 8}
 
 # COMPLETAR - INICIO
-
+conjunto_diferencia = conjunto_07.difference(conjunto_08)
 # COMPLETAR - FIN
 
-assert diccionario_6 == {1: 1111, 2: 2223, 3: 3334, 4: 4444, 5: 5555, 6: 6666}
+assert conjunto_diferencia == {1, 3, 5, 7}
+
+
+"""
+Dados dos conjuntos calcular su diferencia diferencia simetrica utiilizando el caracter circunflejo
+"""
+
+conjunto_09 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+conjunto_10 = {1, 2, 3, 5, 6, 7, 8}
+
+# COMPLETAR - INICIO
+conjunto_diferencia_simetrica = conjunto_09 ^ conjunto_10
+# COMPLETAR - FIN
+
+assert conjunto_diferencia_simetrica == {4, 9}
+
+
+"""
+Dados dos conjuntos calcular su diferencia diferencia simetrica utiilizando el metodo symmetric_difference
+"""
+
+conjunto_09 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+conjunto_10 = {1, 2, 3, 5, 6, 7, 8}
+
+# COMPLETAR - INICIO
+conjunto_09.symmetric_difference(conjunto_10)
+# COMPLETAR - FIN
+
+assert conjunto_diferencia_simetrica == {4, 9}
