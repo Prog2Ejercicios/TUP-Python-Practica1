@@ -9,8 +9,9 @@ True si al menos una de las variables es True.
 esta_lloviendo = True
 riego_activado = True
 
-# COMPLETAR - INICIO
 
+# COMPLETAR - INICIO
+piso_mojado = esta_lloviendo or riego_activado
 # COMPLETAR - FIN
 
 assert piso_mojado
@@ -26,7 +27,7 @@ lado_cuadrado = 5
 area_cuadrado = pow(lado_cuadrado, 2)
 
 # COMPLETAR - INICIO
-
+area_mayor_a_cinco = not area_cuadrado < 5
 # COMPLETAR - FIN
 
 assert area_mayor_a_cinco
@@ -41,11 +42,10 @@ numero_1 = 49
 numero_2 = 50
 
 # COMPLETAR - INICIO
-
+resultado = numero_1 % 7 == 0 and numero_2 % 7 != 0
 # COMPLETAR - FIN
 
 assert resultado
-
 
 """
 Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
@@ -60,7 +60,7 @@ variable_04 = "90"
 variable_05 = 100
 
 # COMPLETAR - INICIO
-
+resultado= variable_01 or variable_03 != variable_02
 # COMPLETAR - FIN
 
 assert resultado == 80
