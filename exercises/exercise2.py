@@ -1,66 +1,72 @@
-"""Lógica Simple y Cortocircuito"""
+"""Comparación"""
+
+"""
+Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
+True si 2 personas tienen el mismo nombre pero distinta edad.
+Aclaración: Se puede utilizar and, or y not.
+"""
+
+persona_01 = "Kevin"
+edad_01 = 24
+persona_02 = "Kevin"
+edad_02 = 41
+
+# COMPLETAR - INICIO
+comparar_nombre_y_edad = (persona_01 == persona_02) and (edad_01 == edad_02)
+# COMPLETAR - FIN
+
+assert comparar_nombre_y_edad
 
 
 """
 Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si al menos una de las variables es True.
+True si un auto no es de marca Ford y su modelo es igual o anterior al año 2000.
+Aclaración: Se puede utilizar and, or y not.
 """
 
-esta_lloviendo = True
-riego_activado = True
+marca_del_auto = "Chevrolet"
+modelo_de_auto = 1998
 
 # COMPLETAR - INICIO
-
+comparar_marca_y_modelo = (marca_del_auto == "Chevrolet")  and (modelo_de_auto == 1998)
 # COMPLETAR - FIN
 
-assert piso_mojado
+assert comparar_marca_y_modelo
 
 
 """
 Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si el área es mayor a 5.
-Restricción: Usar NOT.
+True si la superfice del campo 1 es menor a la del campo 2 y la superficie del
+campo 2 es mayor a la del campo 3.
+Restricción: Utilizar comparaciones encadenadas - No utilizar and, or ni not.
 """
 
-lado_cuadrado = 5
-area_cuadrado = pow(lado_cuadrado, 2)
+superficie_de_campo_01 = 85121
+superficie_de_campo_02 = 851212
+superficie_de_campo_03 = 8512
 
 # COMPLETAR - INICIO
-
+comparar_superficie = (superficie_de_campo_01<=superficie_de_campo_02) and (superficie_de_campo_02>=superficie_de_campo_03)
 # COMPLETAR - FIN
 
-assert area_mayor_a_cinco
+assert comparar_superficie
 
 
 """
 Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si el número 1 es divisible por 7 y al mismo tiempo el número 2 no lo es.
+True si la cantidad de bananas es menor a la mitad de la cantidad de naranjas,
+la mitad de naranjas es menor a dos veces la cantidad de manzanas y dos veces
+la cantidad de manzanas es menor o igual a la cantidad de peras al cuadrado.
+Restricción: Utilizar comparaciones encadenadas y no utilizar and, or ni not.
 """
 
-numero_1 = 49
-numero_2 = 50
+bananas = 100
+naranjas = 400
+manzanas = 300
+peras = 30
 
 # COMPLETAR - INICIO
-
+comparar_frutas = (bananas < naranjas/2 < manzanas*2 < pow(peras,2))
 # COMPLETAR - FIN
 
-assert resultado
-
-
-"""
-Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-el mismo valor de la variable 3.
-Restricción: sólo usar OR, NOT y el mecanismo de cortocircuito.
-"""
-
-variable_01 = False
-variable_02 = True
-variable_03 = 80
-variable_04 = "90"
-variable_05 = 100
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert resultado == 80
+assert comparar_frutas

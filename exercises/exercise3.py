@@ -1,72 +1,78 @@
-"""Comparación"""
+"""Conversiones Básicas"""
+
 
 """
-Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si 2 personas tienen el mismo nombre pero distinta edad.
-Aclaración: Se puede utilizar and, or y not.
+Convertir los numeros de string a enteros y luego sumarlos.
 """
 
-persona_01 = "Kevin"
-edad_01 = 24
-persona_02 = "Kevin"
-edad_02 = 41
+numero_01 = "123"
+numero_02 = "456"
+numero_03 = "789"
+numero_04 = "132"
 
 # COMPLETAR - INICIO
-
+numero_01 = int (numero_01)
+numero_02 = int (numero_02)
+numero_03 = int (numero_03)
+numero_04 = int (numero_04)
+suma_de_numeros = numero_01 + numero_02 + numero_03 + numero_04
 # COMPLETAR - FIN
 
-assert comparar_nombre_y_edad
+assert suma_de_numeros == 1500
 
 
 """
-Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si un auto no es de marca Ford y su modelo es igual o anterior al año 2000.
-Aclaración: Se puede utilizar and, or y not.
+Convertir los numeros de enteros a string y luego concatenarlos.
 """
 
-marca_del_auto = "Chevrolet"
-modelo_de_auto = 1998
+numero_01 = 123
+numero_02 = 456
+numero_03 = 789
 
 # COMPLETAR - INICIO
-
+numero_01 = str (numero_01)
+numero_02 = str (numero_02)
+numero_03 = str (numero_03)
+suma_de_numeros_string = numero_01+numero_02+numero_03
 # COMPLETAR - FIN
 
-assert comparar_marca_y_modelo
+assert suma_de_numeros_string == "123456789"
 
 
 """
-Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si la superfice del campo 1 es menor a la del campo 2 y la superficie del
-campo 2 es mayor a la del campo 3.
-Restricción: Utilizar comparaciones encadenadas - No utilizar and, or ni not.
+Convertir los numeros de binario, octal y hexadecimal a enteros y luego
+multiplicarlos.
 """
 
-superficie_de_campo_01 = 85121
-superficie_de_campo_02 = 851212
-superficie_de_campo_03 = 8512
+numero_binario = "0b111010110101110111101000000"
+numero_octal = "0o1425"
+numero_hexadecimal = "0x6f540"
 
 # COMPLETAR - INICIO
-
+numero_binario = int ("0b111010110101110111101000000",2)
+numero_octal = int ("0o1425",8)
+numero_hexadecimal = ("0x6f540",16)
+multiplicacion_de_numeros = numero_binario*numero_octal*numero_hexadecimal
 # COMPLETAR - FIN
 
-assert comparar_superficie
+assert multiplicacion_de_numeros == 44397345600000000
 
 
 """
-Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si la cantidad de bananas es menor a la mitad de la cantidad de naranjas,
-la mitad de naranjas es menor a dos veces la cantidad de manzanas y dos veces
-la cantidad de manzanas es menor o igual a la cantidad de peras al cuadrado.
-Restricción: Utilizar comparaciones encadenadas y no utilizar and, or ni not.
+Convertir todo los numeros a enteros y luego restarlos secuencialmente (El uno
+menos el dos menos el tres menos el cuatro).
 """
 
-bananas = 100
-naranjas = 400
-manzanas = 300
-peras = 30
+numero_01 = "987"
+numero_02 = "0x6f54F"
+numero_03 = "0o1234"
+numero_04 = 654
 
 # COMPLETAR - INICIO
-
+numero_01 = int (numero_01)
+numero_02 = int ("0x6f54F",16)
+numero_03 = int ("0o1234",8)
+resultado_resta = 
 # COMPLETAR - FIN
 
-assert comparar_frutas
+assert resultado_resta == -456350

@@ -1,89 +1,219 @@
-"""Strings"""
-
+"""Listas"""
 
 """
-Formatear las siguientes variables de tipo string en un único string.
-Restricción: Utilizar el operador +.
+Inicializar una lista vacía y luego agregarle 4 elementos cualquiera
+Restricción: Utilizar el método append
 """
-
-variable_01 = "¡Buenos "
-variable_02 = "días "
-variable_03 = "a todos!"
 
 # COMPLETAR - INICIO
-
+lista_01 = []
+lista_01.append(1)
+lista_01.append(2)
+lista_01.append(3)
+lista_01.append(4)
 # COMPLETAR - FIN
 
-assert strings_concatenados == "¡Buenos días a todos!"
+assert len(lista_01) == 4
 
 
 """
-Formatear los siguientes strings en un único string.
-Restricción: Usar directamente los strings y la concatenación automática (no
-usar operadores).
+Extraer el cuarto elemento de la lista
+Restricción: Utilizar el método pop
 """
 
-# "¡Mamá "
-# "estoy concatenando "
-# "strings!"
+lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
-
+elemento_extraido = lista.pop(3)
 # COMPLETAR - FIN
 
-assert strings_concatenados == "¡Mamá estoy concatenando strings!"
+assert elemento_extraido == 6
 
 
 """
-Formatear las siguientes variables en un único string.
-Aclaración: Se debe convertir la variable entera a string
-Restricción: Utilizar el operador +.
+Concatenar las siguientes listas
+Restricción: Utilizar el método extend
 """
 
-variable_01 = "Le debo "
-variable_02 = 600
-variable_03 = " pesos a un amigo."
+lista_a = [1, 2, 3]
+lista_b = ["4", "5", "6"]
+lista_c = ["siete", "ocho", "nueve"]
 
 # COMPLETAR - INICIO
-
+listas_concatenadas_01 = []
+listas_concatenadas_01.extend(lista_a)
+listas_concatenadas_01.extend(lista_b)
+listas_concatenadas_01.extend(lista_c)
 # COMPLETAR - FIN
 
-assert strings_concatenados == "Le debo 600 pesos a un amigo."
+assert listas_concatenadas_01 == [1, 2, 3, "4", "5", "6", "siete", "ocho", "nueve"]
 
 
 """
-Formatear las siguientes variables en un único string.
-Aclaración: No es necesario realizar conversiones de tipo.
-Restricción: Utilizar el método format.
+Agregar la variable variable_01 en la tercer posición de la lista lista_nueva
+Restricción: Utilizar el método insert
 """
 
-variable_01 = "Le debo "
-variable_02 = 6
-variable_03 = " pesos a un amigo hace "
-variable_04 = " años."
-variable_05 = "Ezequiel"
+variable_01 = 2
+lista_nueva = [0, 1, 3, 4]
 
 # COMPLETAR - INICIO
-
+lista_nueva.insert(variable_01,2)
 # COMPLETAR - FIN
 
-assert (
-    strings_concatenados == "Le debo 6 pesos a un amigo hace 6 años. Se llama Ezequiel"
-)
+assert lista_nueva == [0, 1, 2, 3, 4]
 
 
 """
-Formatear las siguientes variables en un único string.
-Restricción: Utilizar f-Strings.
+Armar una lista que contenga el primer y el último elemento de la siguiente lista
+Restricción: Utilizar el método append junto al indexado simple
 """
 
-variable_01 = "Le pagué "
-variable_02 = 2
-variable_03 = " pesos que le debía a Ezequiel, me faltan $"
-variable_04 = 4
+lista = ["ho", 3.1416, 42, 81, 6, "la"]
 
 # COMPLETAR - INICIO
-
+lista_primero_y_ultimo = []
+lista_primero_y_ultimo.insert(0,lista[0])
+lista_primero_y_ultimo.insert(1,lista[-1])
 # COMPLETAR - FIN
 
-assert strings_concatenados == "Le pagué 2 pesos que le debía a Ezequiel, me faltan $4"
+assert lista_primero_y_ultimo == ["ho", "la"]
+
+
+"""
+Armar una lista que contenga los primeros 3 elementos de la siguiente lista
+Restricción: Utilizar el método append junto al indexado simple
+"""
+
+lista = ["ho", 3.1416, "la", 81, 6, 42]
+
+# COMPLETAR - INICIO
+lista_primeros = []
+lista_primeros.append(lista[0])
+lista_primeros.append(lista[1])
+lista_primeros.append(lista[2])
+# COMPLETAR - FIN
+
+assert lista_primeros == ["ho", 3.1416, "la"]
+
+
+"""
+Armar una lista que contenga los primeros 3 elementos de la siguiente lista
+Restricción: Utilizar indexado múltiple
+"""
+
+lista = ["ho", 3.1416, "la", 81, 6, 42]
+
+# COMPLETAR - INICIO
+lista_primeros = lista[0:3]
+# COMPLETAR - FIN
+
+assert lista_primeros == ["ho", 3.1416, "la"]
+
+
+"""
+Armar una lista que contenga los primeros 2 y los últimos 2 elementos de la
+siguiente lista
+Restricción: Utilizar el método extend junto al indexado múltiple
+"""
+
+lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
+
+# COMPLETAR - INICIO
+lista_primeros_y_ultimos = []
+lista_primeros_y_ultimos.extend(lista[0:2])
+lista_primeros_y_ultimos.extend(lista[5:7])
+# COMPLETAR - FIN
+
+assert lista_primeros_y_ultimos == ["ho", "la", "como", "estas?"]
+
+
+"""
+Concatenar las siguientes 2 listas
+Restricción: Utiliar el operador +
+"""
+
+lista_01 = [0, 1, 2, 3]
+lista_02 = [5, 6]
+
+# COMPLETAR - INICIO
+lista_concatenada = lista_01 + lista_02
+# COMPLETAR - FIN
+
+assert lista_concatenada == [0, 1, 2, 3, 5, 6]
+
+
+"""
+Concatenar 3 veces la siguiente lisa consigo misma
+Restricción: Utiliar el operador *
+"""
+
+lista_01 = [0, 1, 0, 1, 0, 1]
+
+# COMPLETAR - INICIO
+lista_duplicada = lista_01 * 3
+# COMPLETAR - FIN
+
+assert lista_duplicada == [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+
+
+"""
+Verificar si el siguiente elemento pertenece a la lista
+Restricción: Utiliar el operador in
+"""
+
+elemento = 1.0
+lista = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1.0, 1, 0, 1, 0, 1]
+
+# COMPLETAR - INICIO
+variable_booleana = elemento in lista
+# COMPLETAR - FIN
+
+assert variable_booleana
+
+
+"""
+Verificar si las siguientes listas son iguales
+Restricción: Utilizar el operador ==
+"""
+
+lista_01 = [1, 2, 3, 4.5, 6, 7]
+lista_02 = [1, 3, 2, 4, 5, 6, 7]
+
+# COMPLETAR - INICIO
+son_iguales = lista_01 == lista_02
+# COMPLETAR - FIN
+
+assert not son_iguales
+
+
+"""
+Se cuenta con una lista de elementos booleanos que corresponden a las notas de los exámenes
+cuatrimestrales de un alumno (True si está aprobado y False en caso contrario)
+Determinar si el alumno no tiene examenes aprobados.
+Restricción: Utilizar el método any
+"""
+
+notas = [False, False, False, False, False, False, False, False, False]
+
+# COMPLETAR - INICIO
+no_tiene_examenes_aprobados = not any(notas)
+# COMPLETAR - FIN
+
+assert no_tiene_examenes_aprobados
+
+
+"""
+Se cuenta con una lista de elementos booleanos que corresponden a las notas de los exámenes
+cuatrimestrales de un alumno (True si está aprobado y False en caso contrario)
+Determinar si el alumno ha aprobado todos sus exámenes.
+Restricción: Utilizar el método all
+"""
+
+notas = [True, True, False, True, True, True, True, True, True, True, True, True]
+
+# COMPLETAR - INICIO
+tiene_todo_aprobado = all(notas)
+# COMPLETAR - FIN
+
+assert not tiene_todo_aprobado

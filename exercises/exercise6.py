@@ -1,205 +1,115 @@
-"""Listas"""
+""""Tuplas y Desempaquetado"""
 
 """
-Inicializar una lista vacía y luego agregarle 4 elementos cualquiera
-Restricción: Utilizar el método append
+A partir de ls siguiente lista instanciar una tupla que contenga todos sus valores
+y en el mismo orden.
 """
+
+lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
-lista_01 = 
+tupla = (lista[0], lista[1], lista[2],lista[3])
 # COMPLETAR - FIN
 
-assert len(lista_01) == 4
+assert tupla == ("casa", "perro", "pato", "gato")
 
 
 """
-Extraer el cuarto elemento de la lista
-Restricción: Utilizar el método pop
+A partir de ls siguiente tupla instanciar una lista que contenga todos sus valores
+y en el mismo orden.
 """
 
-lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
+tupla = "casa", "perro", "pato", "gato", "tenedor"
 
 # COMPLETAR - INICIO
-
+lista = [tupla[0], tupla[1],tupla[2], tupla[3], tupla[4]]
 # COMPLETAR - FIN
 
-assert elemento_extraido == 6
+assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
 
 
 """
-Concatenar las siguientes listas
-Restricción: Utilizar el método extend
+Desempaquetar la siguiente tupla en las variables a, b y c
 """
 
-lista_a = [1, 2, 3]
-lista_b = ["4", "5", "6"]
-lista_c = ["siete", "ocho", "nueve"]
+tupla = ("primer", 25, [1, 2, 3])
 
 # COMPLETAR - INICIO
-
+a,b,c = tupla
 # COMPLETAR - FIN
 
-assert listas_concatenadas_01 == [1, 2, 3, "4", "5", "6", "siete", "ocho", "nueve"]
+assert a == "primer" and b == 25 and c == [1, 2, 3]
 
 
 """
-Agregar la variable variable_01 en la tercer posición de la lista lista_nueva
-Restricción: Utilizar el método insert
+Desempaquetar la siguiente tupla y luego sumar sus valores
 """
 
-variable_01 = 2
-lista_nueva = [0, 1, 3, 4]
+tupla = (87, 98, 35, 67, 4, 9)
 
 # COMPLETAR - INICIO
-
+a,b,c,d,e,f = tupla
+total = a + b + c + d + e + f
 # COMPLETAR - FIN
 
-assert lista_nueva == [0, 1, 2, 3, 4]
+assert total == 300
 
 
 """
-Armar una lista que contenga el primer y el último elemento de la siguiente lista
-Restricción: Utilizar el método append junto al indexado simple
+Desempaquetar la siguiente lista y luego concatenar sus elementos
+Restricción: Utilizar f-Strings.
 """
 
-lista = ["ho", 3.1416, 42, 81, 6, "la"]
+lista = ["esta", "mañana", "sali", "a", "correr"]
 
 # COMPLETAR - INICIO
-
+a,b,c,d,e = lista
+string_concatenado = f'{a} {b} {c} {d} {e}'
 # COMPLETAR - FIN
 
-assert lista_primero_y_ultimo == ["ho", "la"]
+assert string_concatenado == "esta mañana sali a correr"
 
 
 """
-Armar una lista que contenga los primeros 3 elementos de la siguiente lista
-Restricción: Utilizar el método append junto al indexado simple
+Desempaquetar el primer elemento de la siguiente tupla
+Restricción: Utilizar desempaquetado con comodines
 """
 
-lista = ["ho", 3.1416, "la", 81, 6, 42]
+tupla = (73, 45, 344, 3434, 2)
 
 # COMPLETAR - INICIO
-
+primer, *rest = tupla
 # COMPLETAR - FIN
 
-assert lista_primeros == ["ho", 3.1416, "la"]
+assert primer == 73
 
 
 """
-Armar una lista que contenga los primeros 3 elementos de la siguiente lista
-Restricción: Utilizar indexado múltiple
+Desempaquetar el primer y el último elemento de la siguiente lista y luego sumarlos
+Restricción: Utilizar desempaquetado con comodines
 """
 
-lista = ["ho", 3.1416, "la", 81, 6, 42]
+lista = [73, 45, 344, 3434, 2]
 
 # COMPLETAR - INICIO
-
+primer, *rest, ultimo = lista
+suma = primer + ultimo
 # COMPLETAR - FIN
 
-assert lista_primeros == ["ho", 3.1416, "la"]
+assert suma == 75
 
 
 """
-Armar una lista que contenga los primeros 2 y los últimos 2 elementos de la
-siguiente lista
-Restricción: Utilizar el método extend junto al indexado múltiple
+Desempaquetar el primer, el segundo, el tercer, el cuarto y el quinto elemento de la
+siguiente tupla y luego concatenarlos
+Restricción: Utilizar desempaquetado con comodines y f-Strings
 """
 
-lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
+tupla = ("anoche", "fui", "a", "la", "fiesta", "pero", "no", "pude", "entrar")
 
 # COMPLETAR - INICIO
-
+a, b, c, d, e, *rest = tupla
+string_concatenado = f'{a} {b} {c} {d} {e}'
 # COMPLETAR - FIN
 
-assert lista_primeros_y_ultimos == ["ho", "la", "como", "estas?"]
-
-
-"""
-Concatenar las siguientes 2 listas
-Restricción: Utiliar el operador +
-"""
-
-lista_01 = [0, 1, 2, 3]
-lista_02 = [5, 6]
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert lista_concatenada == [0, 1, 2, 3, 5, 6]
-
-
-"""
-Concatenar 3 veces la siguiente lisa consigo misma
-Restricción: Utiliar el operador *
-"""
-
-lista_01 = [0, 1, 0, 1, 0, 1]
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert lista_duplicada == [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
-
-
-"""
-Verificar si el siguiente elemento pertenece a la lista
-Restricción: Utiliar el operador in
-"""
-
-elemento = 1.0
-lista = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1.0, 1, 0, 1, 0, 1]
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert variable_booleana
-
-
-"""
-Verificar si las siguientes listas son iguales
-Restricción: Utilizar el operador ==
-"""
-
-lista_01 = [1, 2, 3, 4.5, 6, 7]
-lista_02 = [1, 3, 2, 4, 5, 6, 7]
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert not son_iguales
-
-
-"""
-Se cuenta con una lista de elementos booleanos que corresponden a las notas de los exámenes
-cuatrimestrales de un alumno (True si está aprobado y False en caso contrario)
-Determinar si el alumno no tiene examenes aprobados.
-Restricción: Utilizar el método any
-"""
-
-notas = [False, False, False, False, False, False, False, False, False]
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert no_tiene_examenes_aprobados
-
-
-"""
-Se cuenta con una lista de elementos booleanos que corresponden a las notas de los exámenes
-cuatrimestrales de un alumno (True si está aprobado y False en caso contrario)
-Determinar si el alumno ha aprobado todos sus exámenes.
-Restricción: Utilizar el método all
-"""
-
-notas = [True, True, False, True, True, True, True, True, True, True, True, True]
-
-# COMPLETAR - INICIO
-
-# COMPLETAR - FIN
-
-assert not tiene_todo_aprobado
+assert string_concatenado == "anoche fui a la fiesta"

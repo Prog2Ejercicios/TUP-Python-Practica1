@@ -1,112 +1,166 @@
-""""Tuplas y Desempaquetado"""
+"""Diccionarios"""
 
 
 """
-A partir de ls siguiente lista instanciar una tupla que contenga todos sus valores
-y en el mismo orden.
+Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
+- Clave "Nombre", valor de tipo string: "Mario Pedernera"
+- Clave "DNI", valor de tipo integer: 56895632
+- Clave "Domicilio", valor de tipo string: Los alamos 4509"
+- Clave "Compras", valor de tipo lista: ["cafetera", "TV 50 pulgadas", "mouse gamer"]
 """
-
-lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
-
+Cliente = {"Nombre":"Mario Pedernera",
+           "DNI":56895632,
+           "Domicilio":"Los alamos 4509",
+           "Compras":["cafetera", "TV 50 pulgadas", "mouse gamer"],
+          }
 # COMPLETAR - FIN
 
-assert tupla == ("casa", "perro", "pato", "gato")
+assert (
+    (Cliente["Nombre"] == "Mario Pedernera")
+    and (Cliente["DNI"] == 56895632)
+    and (Cliente["Domicilio"] == "Los alamos 4509")
+    and (Cliente["Compras"] == ["cafetera", "TV 50 pulgadas", "mouse gamer"])
+)
 
 
 """
-A partir de ls siguiente tupla instanciar una lista que contenga todos sus valores
-y en el mismo orden.
+Definir un diccionario para las 'Compras' que contenga los siguiente valores:
+- Clave "Mario Pedernera", valor de tipo lista: ["cafetera", "TV 50 pulgadas", "mouse gamer"]
+- Clave "Ezequiel Castello", valor de tipo lista: ["ipad", "ipod", "iphone"]
+- Clave "Pablo Piristrelli", valor de tipo lista: ["Reproductor de CD", "Videograbadora"]
 """
-
-tupla = "casa", "perro", "pato", "gato", "tenedor"
 
 # COMPLETAR - INICIO
-
+Compras = { 
+"Mario Pedernera": ["cafetera", "TV 50 pulgads", "mouse gamer"],
+"Ezequiel Castello": ["ipad", "ipod", "iphone"],
+"Pablo Piristrelli": ["Reproductor de CD", "Videograbadora"],
+}
 # COMPLETAR - FIN
 
-assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
+assert (
+    (Compras["Mario Pedernera"] == ["cafetera", "TV 50 pulgads", "mouse gamer"])
+    and (Compras["Ezequiel Castello"] == ["ipad", "ipod", "iphone"])
+    and (Compras["Pablo Piristrelli"] == ["Reproductor de CD", "Videograbadora"])
+)
 
 
 """
-Desempaquetar la siguiente tupla en las variables a, b y c
+Dado el siguiente diccionario obtener el valor de la "clave1" utilizando el metodo get y
+guardarlo en la variable clave1
 """
 
-tupla = ("primer", 25, [1, 2, 3])
+diccionario = {
+    "clave1": 234,
+    "clave2": True,
+    "clave3": "Valor 1",
+    "clave4": [1, 2, 3, 4],
+}
 
 # COMPLETAR - INICIO
-
+clave1 = diccionario.get("clave1")
 # COMPLETAR - FIN
 
-assert a == "primer" and b == 25 and c == [1, 2, 3]
+assert clave1 == 234
 
 
 """
-Desempaquetar la siguiente tupla y luego sumar sus valores
+Dado el siguiente diccionario forzar la obtención de un valor por defecto igual a 5 utilizando
+el metodo get y almacenarlo en la variable clave5
+Restricción: Se debe intentar obtener un valor para la clave inexistente "clave5"
 """
 
-tupla = (87, 98, 35, 67, 4, 9)
+diccionario_2 = {
+    "clave1": 234567,
+    "clave2": False,
+    "clave3": "Valor 13",
+    "clave4": [1, 2, 3, 4, 5, 6],
+}
 
 # COMPLETAR - INICIO
-
+clave5 = diccionario_2.get("clave5",5)
 # COMPLETAR - FIN
 
-assert total == 300
+assert clave5 == 5
 
 
 """
-Desempaquetar la siguiente lista y luego concatenar sus elementos
-Restricción: Utilizar f-Strings.
+Dado el siguiente diccionario obtener una lista de todas sus claves por medio del método keys
 """
 
-lista = ["esta", "mañana", "sali", "a", "correr"]
+diccionario_3 = {
+    "clave1": 1234,
+    "clave2": True,
+    "clave3": "Valor 1",
+    "clave4": [1, 2, 3, 4],
+}
 
 # COMPLETAR - INICIO
-
+keys = list(diccionario_3.keys())
 # COMPLETAR - FIN
 
-assert string_concatenado == "esta mañana sali a correr"
+assert keys == ["clave1", "clave2", "clave3", "clave4"]
 
 
 """
-Desempaquetar el primer elemento de la siguiente tupla
-Restricción: Utilizar desempaquetado con comodines
+Dado el siguiente diccionario obtener una lista de todas sus valores por medio del método values
 """
 
-tupla = (73, 45, 344, 3434, 2)
+diccionario_4 = {
+    "clave1": 1234,
+    "clave2": 4567,
+    "clave3": 8910,
+    "clave4": 1112,
+}
 
 # COMPLETAR - INICIO
-
+values = list(diccionario_4.values())
 # COMPLETAR - FIN
 
-assert primer == 73
+assert values == [1234, 4567, 8910, 1112]
 
 
 """
-Desempaquetar el primer y el último elemento de la siguiente lista y luego sumarlos
-Restricción: Utilizar desempaquetado con comodines
+Dado el siguiente diccionario obtener una lista de sus claves y sus valores uno a continuación
+de otro por medio del metodo items
 """
 
-lista = [73, 45, 344, 3434, 2]
+diccionario_5 = {
+    1: 1111,
+    2: 2222,
+    3: 3333,
+    4: 4444,
+}
 
 # COMPLETAR - INICIO
-
+items = list(diccionario_5.items())
 # COMPLETAR - FIN
 
-assert suma == 75
+assert items == [(1, 1111), (2, 2222), (3, 3333), (4, 4444)]
 
 
 """
-Desempaquetar el primer, el segundo, el tercer, el cuarto y el quinto elemento de la
-siguiente tupla y luego concatenarlos
-Restricción: Utilizar desempaquetado con comodines y f-Strings
+Dados dos diccionarios actualizar el primero con los valores del segundo utilizando el método update
 """
 
-tupla = ("anoche", "fui", "a", "la", "fiesta", "pero", "no", "pude", "entrar")
+diccionario_6 = {
+    1: 1111,
+    2: 2222,
+    3: 3333,
+    4: 4444,
+}
+
+diccionario_7 = {
+    2: 2223,
+    3: 3334,
+    5: 5555,
+    6: 6666,
+}
 
 # COMPLETAR - INICIO
-
+diccionario_6.update(diccionario_7)
 # COMPLETAR - FIN
 
-assert string_concatenado == "anoche fui a la fiesta"
+assert diccionario_6 == {1: 1111, 2: 2223, 3: 3334, 4: 4444, 5: 5555, 6: 6666}

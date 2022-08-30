@@ -1,65 +1,90 @@
-"""Conversiones Básicas"""
+"""Strings"""
 
 
 """
-Convertir los numeros de string a enteros y luego sumarlos.
+Formatear las siguientes variables de tipo string en un único string.
+Restricción: Utilizar el operador +.
 """
 
-numero_01 = "123"
-numero_02 = "456"
-numero_03 = "789"
-numero_04 = "132"
+variable_01 = "¡Buenos "
+variable_02 = "días "
+variable_03 = "a todos!"
 
 # COMPLETAR - INICIO
-
+strings_concatenados = variable_01 + variable_02 + variable_03
 # COMPLETAR - FIN
 
-assert suma_de_numeros == 1500
+assert strings_concatenados == "¡Buenos días a todos!"
 
 
 """
-Convertir los numeros de enteros a string y luego concatenarlos.
+Formatear los siguientes strings en un único string.
+Restricción: Usar directamente los strings y la concatenación automática (no
+usar operadores).
 """
 
-numero_01 = 123
-numero_02 = 456
-numero_03 = 789
+# "¡Mamá "
+# "estoy concatenando "
+# "strings!"
 
 # COMPLETAR - INICIO
-
+strings_concatenados ="¡Mamá " "estoy concatenando " "strings!"
 # COMPLETAR - FIN
 
-assert suma_de_numeros_string == "123456789"
+assert strings_concatenados == "¡Mamá estoy concatenando strings!"
 
 
 """
-Convertir los numeros de binario, octal y hexadecimal a enteros y luego
-multiplicarlos.
+Formatear las siguientes variables en un único string.
+Aclaración: Se debe convertir la variable entera a string
+Restricción: Utilizar el operador +.
 """
 
-numero_binario = "0b111010110101110111101000000"
-numero_octal = "0o1425"
-numero_hexadecimal = "0x6f540"
+variable_01 = "Le debo "
+variable_02 = 600
+variable_03 = " pesos a un amigo."
 
 # COMPLETAR - INICIO
-
+strings_concatenados = variable_01 + str(variable_02) + variable_03
 # COMPLETAR - FIN
 
-assert multiplicacion_de_numeros == 44397345600000000
+assert strings_concatenados == "Le debo 600 pesos a un amigo."
 
 
 """
-Convertir todo los numeros a enteros y luego restarlos secuencialmente (El uno
-menos el dos menos el tres menos el cuatro).
+Formatear las siguientes variables en un único string.
+Aclaración: No es necesario realizar conversiones de tipo.
+Restricción: Utilizar el método format.
 """
 
-numero_01 = "987"
-numero_02 = "0x6f54F"
-numero_03 = "0o1234"
-numero_04 = 654
+variable_01 = "Le debo "
+variable_02 = 6
+variable_03 = " pesos a un amigo hace "
+variable_04 = " años."
+variable_05 = "Ezequiel"
 
 # COMPLETAR - INICIO
-
+strings_concatenados = "{0}{1}{2}{1}{3} Se llama {4}".format(variable_01, variable_02, variable_03, variable_04, variable_05)
+strings_concatenados = "{v1}{v2}{v3}{v2}{v4} Se llama {v5}".format(v1=variable_01, v2=variable_02, v3=variable_03, v4=variable_04, v5=variable_05)
 # COMPLETAR - FIN
 
-assert resultado_resta == -456350
+assert (
+    strings_concatenados == "Le debo 6 pesos a un amigo hace 6 años. Se llama Ezequiel"
+)
+
+
+"""
+Formatear las siguientes variables en un único string.
+Restricción: Utilizar f-Strings.
+"""
+
+variable_01 = "Le pagué "
+variable_02 = 2
+variable_03 = " pesos que le debía a Ezequiel, me faltan $"
+variable_04 = 4
+
+# COMPLETAR - INICIO
+f'{variable_01}{variable_02}{variable_03}{variable_04}'
+# COMPLETAR - FIN
+
+# assert strings_concatenados == "Le pagué 2 pesos que le debía a Ezequiel, me faltan $4"
