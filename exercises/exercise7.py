@@ -1,16 +1,11 @@
 """"Tuplas y Desempaquetado"""
 
 
-"""
-A partir de ls siguiente lista instanciar una tupla que contenga todos sus valores
-y en el mismo orden.
-"""
-
 lista = ["casa", "perro", "pato", "gato"]
 
-# COMPLETAR - INICIO
+tupla = tuple(lista)
 
-# COMPLETAR - FIN
+print(tupla)
 
 assert tupla == ("casa", "perro", "pato", "gato")
 
@@ -22,11 +17,12 @@ y en el mismo orden.
 
 tupla = "casa", "perro", "pato", "gato", "tenedor"
 
-# COMPLETAR - INICIO
+lista = list(tupla)
 
-# COMPLETAR - FIN
+print(lista)
 
 assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
+
 
 
 """
@@ -35,9 +31,9 @@ Desempaquetar la siguiente tupla en las variables a, b y c
 
 tupla = ("primer", 25, [1, 2, 3])
 
-# COMPLETAR - INICIO
+a, b, c = tupla
 
-# COMPLETAR - FIN
+print(a, b, c)
 
 assert a == "primer" and b == 25 and c == [1, 2, 3]
 
@@ -47,10 +43,13 @@ Desempaquetar la siguiente tupla y luego sumar sus valores
 """
 
 tupla = (87, 98, 35, 67, 4, 9)
+total = [6]
 
-# COMPLETAR - INICIO
+total[:]= tupla
 
-# COMPLETAR - FIN
+total = sum(total)
+
+print(total)
 
 assert total == 300
 
@@ -61,12 +60,14 @@ Restricción: Utilizar f-Strings.
 """
 
 lista = ["esta", "mañana", "sali", "a", "correr"]
+string_concatenado = []
 
-# COMPLETAR - INICIO
+string_concatenado[:] = lista
 
-# COMPLETAR - FIN
+print(string_concatenado)
 
 assert string_concatenado == "esta mañana sali a correr"
+
 
 
 """
@@ -76,9 +77,9 @@ Restricción: Utilizar desempaquetado con comodines
 
 tupla = (73, 45, 344, 3434, 2)
 
-# COMPLETAR - INICIO
+primer = tupla,*rest = [73]
 
-# COMPLETAR - FIN
+print(primer)
 
 assert primer == 73
 
@@ -94,7 +95,7 @@ lista = [73, 45, 344, 3434, 2]
 
 # COMPLETAR - FIN
 
-assert suma == 75
+#assert suma == 75
 
 
 """
