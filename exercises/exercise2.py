@@ -6,11 +6,15 @@ Construir una expresión lógica que use TODAS las variables y cuyo resultado se
 True si al menos una de las variables es True.
 """
 
+from unittest import result
+
+
 esta_lloviendo = True
 riego_activado = True
-
 # COMPLETAR - INICIO
-
+if esta_lloviendo == True or riego_activado == True:
+    piso_mojado = True
+    print(piso_mojado)
 # COMPLETAR - FIN
 
 assert piso_mojado
@@ -24,9 +28,10 @@ Restricción: Usar NOT.
 
 lado_cuadrado = 5
 area_cuadrado = pow(lado_cuadrado, 2)
-
 # COMPLETAR - INICIO
-
+if area_cuadrado > lado_cuadrado:
+    area_mayor_a_cinco = not False
+    print(area_mayor_a_cinco)
 # COMPLETAR - FIN
 
 assert area_mayor_a_cinco
@@ -39,9 +44,10 @@ True si el número 1 es divisible por 7 y al mismo tiempo el número 2 no lo es.
 
 numero_1 = 49
 numero_2 = 50
-
 # COMPLETAR - INICIO
-
+if numero_1 % 7 == 0 and numero_2 % 7 != 0:
+    resultado = True
+    print(resultado)
 # COMPLETAR - FIN
 
 assert resultado
@@ -58,7 +64,7 @@ variable_02 = True
 variable_03 = 80
 variable_04 = "90"
 variable_05 = 100
-
+resultado = 0
 # COMPLETAR - INICIO
 
 # COMPLETAR - FIN
