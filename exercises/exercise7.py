@@ -6,9 +6,19 @@ A partir de ls siguiente lista instanciar una tupla que contenga todos sus valor
 y en el mismo orden.
 """
 
+from tkinter import E
+from typing import Tuple
+
+
 lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
+
+lista = ["casa", "perro", "pato", "gato"]
+
+tupla = tuple(lista)
+
+print(tupla)
 
 # COMPLETAR - FIN
 
@@ -24,6 +34,12 @@ tupla = "casa", "perro", "pato", "gato", "tenedor"
 
 # COMPLETAR - INICIO
 
+tupla = "casa", "perro", "pato", "gato", "tenedor"
+
+lista = tuple(tupla)
+
+print(lista)
+
 # COMPLETAR - FIN
 
 assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
@@ -37,6 +53,15 @@ tupla = ("primer", 25, [1, 2, 3])
 
 # COMPLETAR - INICIO
 
+tupla = ("primer", 25, [1, 2, 3])
+
+a = tupla[0]
+
+b = tupla[1] 
+
+c = tupla[2]
+
+
 # COMPLETAR - FIN
 
 assert a == "primer" and b == 25 and c == [1, 2, 3]
@@ -49,6 +74,23 @@ Desempaquetar la siguiente tupla y luego sumar sus valores
 tupla = (87, 98, 35, 67, 4, 9)
 
 # COMPLETAR - INICIO
+
+tupla = (87, 98, 35, 67, 4, 9)
+
+a = tupla[0]
+
+b = tupla[1] 
+
+c = tupla[2]
+
+d = tupla[3]
+
+e = tupla[4]
+
+f = tupla[5]
+
+total = sum(tupla)
+
 
 # COMPLETAR - FIN
 
@@ -64,6 +106,13 @@ lista = ["esta", "mañana", "sali", "a", "correr"]
 
 # COMPLETAR - INICIO
 
+a,b,c,d,e=lista
+string_concatenado=f'{a} {b} {c} {d} {f}'
+
+
+
+print(string_concatenado)
+
 # COMPLETAR - FIN
 
 assert string_concatenado == "esta mañana sali a correr"
@@ -78,6 +127,13 @@ tupla = (73, 45, 344, 3434, 2)
 
 # COMPLETAR - INICIO
 
+tupla = (73, 45, 344, 3434, 2)
+
+a, *rest = tupla
+primer=a
+
+print(primer)
+
 # COMPLETAR - FIN
 
 assert primer == 73
@@ -91,6 +147,8 @@ Restricción: Utilizar desempaquetado con comodines
 lista = [73, 45, 344, 3434, 2]
 
 # COMPLETAR - INICIO
+a, *rest, b = lista
+suma = a+b
 
 # COMPLETAR - FIN
 
@@ -106,6 +164,9 @@ Restricción: Utilizar desempaquetado con comodines y f-Strings
 tupla = ("anoche", "fui", "a", "la", "fiesta", "pero", "no", "pude", "entrar")
 
 # COMPLETAR - INICIO
+
+a,b,c,d,e,*resta = tupla
+string_concatenado = f"{a} {b} {c} {d} {e}"
 
 # COMPLETAR - FIN
 
